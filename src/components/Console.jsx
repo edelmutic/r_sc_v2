@@ -21,6 +21,11 @@ color: ${props => props.color || 'white'};
 
 const Console = ({ color, ...props }) => {
     const [lines, setLines] = useState(['C/users/~/Desktop>'])
+    const onKeyPress = e => {
+        if (e.charCode == 13) {
+            setLines([...lines, "C/users/~/Desktop>"])
+        }
+    }
     return (
         <Flex>
             <Flex direction='column'>
@@ -30,7 +35,7 @@ const Console = ({ color, ...props }) => {
                     </Line>
                 )}
             </Flex>
-            <StyledConsole {...props} />
+            <StyledConsole color='green' onKeyPress={onKeyPress} {...props} />
         </Flex>
     )
 }
