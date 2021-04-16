@@ -23,12 +23,12 @@ cursor: pointer;
 }
 align-self: ${props => props.align || 'stretch'};
 ${props => props.primary && css`
-    color: ${props => props.color || 'white'};
+    color: ${props => props.color || props.theme.colors.primary};
     background: ${props => props.background || 'white'};
 `}
 ${props => props.outlined && css`
-    color: ${props => props.color || 'white'};
-    border: 1px solid ${props => props.color || "white"};
+    color: ${props => props.color || props.theme.colors.primary};
+    border: 1px solid ${props => props.color || props.theme.colors.primary};
     background: transparent;
 `}
 `
@@ -38,7 +38,7 @@ const LargeButton = styled(StyledButton)`
 `
 
 const Button = (props) => {
-    return <StyledButton {...props} />
+    return <StyledButton onClick={() => alert('Clicked')} {...props} />
 };
 
 export default Button;

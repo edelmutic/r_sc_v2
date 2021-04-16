@@ -13,8 +13,8 @@ const Global = createGlobalStyle`
 `;
 const theme = {
   colors: {
-    primary: 'red',
-    secondary: 'red',
+    primary: 'orange',
+    secondary: 'green',
   },
   media: {
     phone: '(max-width: 425px)',

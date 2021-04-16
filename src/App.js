@@ -16,11 +16,11 @@ function App() {
   return (
     <AppWrapper>
       <Flex justify='center'>
-        <Title color={'green'}> {new Date().toLocaleTimeString()} </Title>
+        <Title> {new Date().toLocaleTimeString()} </Title>
       </Flex>
       <Flex direction='column'>
-        <Console color='green' />
-        <Button outlined color='green' align='flex-end'>Send</Button>
+        <Console />
+        <Button outlined align='flex-end'>Send</Button>
       </Flex>
     </AppWrapper>
   );
