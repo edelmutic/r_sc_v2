@@ -19,7 +19,7 @@ function App() {
         <Title color={'green'}> {new Date().toLocaleTimeString()} </Title>
       </Flex>
       <Flex direction='column'>
-        <Console />
+        <Console color='green' />
         <Button outlined color='green' align='flex-end'>Send</Button>
       </Flex>
     </AppWrapper>
